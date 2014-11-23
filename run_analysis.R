@@ -41,4 +41,4 @@ meltDataSet <- melt(filterdDataSet,id.vars = c("subject", "activityName"))
 # cast the molten data set into a collapsed tidy dataset
 tidy <- dcast(meltDataSet, subject + activityName ~ variable, mean)
 # write the dataset to a file
-write.table(tidy, "tidydataset.txt", row.name = FALSE, sep="\t")
+write.table(tidy, "tidydataset.txt", row.name = FALSE, sep="\t", quote = FALSE)
